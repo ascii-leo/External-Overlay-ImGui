@@ -116,15 +116,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         std::vector<std::string> items = { "ascii.leo" };
 
         if (overlay.occluded == false) {
-            ImGui::SetNextWindowSize({ 500, 500 });
+            ImGui::SetNextWindowSize({ 900, 500 });
             if (ImGui::Begin("Example Test", nullptr, window_flags)) {
-
-                float index = 0;
-                for (auto& str : items) {
-                    ImGui::SetCursorPos({ 20, 20 + (index * 20) });
-                    ImGui::Text(items[index].c_str());
-                    ++index;
-                }
 
             }ImGui::End();
         }
